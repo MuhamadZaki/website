@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0073b7;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+nav {
+    background-color: #006dad;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.top-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.top-right a:hover {
+    color: #ccc;
+}
+
+/* CSS untuk tampilan form pendaftaran */
+.register-form {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+
+.register-form button {
+    width: 100%;
+    background-color: #0073b7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.register-form button:hover {
+    background-color: #006dad;
+}
+
+
+
+.social-login {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+  }
+  
+  .social-login p {
+    margin: 10px 0;
+  }
+  
+  .social-login a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    background-color: #555; 
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px; 
+  }
+  
+  .social-button.google {
+    background-color: #dd4b39;
+  }
+  
+  .social-button:hover {
+    opacity: 0.8;
+  }
+
+
+
+footer {
+    background-color: #0073b7;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
