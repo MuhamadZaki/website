@@ -1,31 +1,34 @@
+"""IMPORT MODUL FLASK UNTUK MEMBUAT WEBAPP"""
 from flask import Flask
 #from flask_migrate import Migrate
+"""IMPORT KONFIGURASI APLIKASI DARI FILE CONFIG"""
 from config import Config
+"""IMPORT OBJEK DATABASE DAN FUNGSI INISIALISASI DATABASE DARI MODELS"""
 from models import db, init_db
+"""IMPORT MODUL OAUTH DARI FLASK_OAUTHLIB UNTUK AUTENTIKASI OAUTH"""
 from flask_oauthlib.client import OAuth
 #import os
 
-# Inisialisasi aplikasi Flask
+"""INISIALISASI OBJEK FLASK DENGAN MENYERTAKAN FOLDER STATIS DAN TEMPLATE"""
 app = Flask(__name__, static_folder='resources/static', template_folder='resources/templates')
 
-
-# Mengatur konfigurasi aplikasi dari objek Config yang telah dibuat sebelumnya
+"""KONFIGURASI APLIKASI MENGGUNAKAN OBJEK CONFIG"""
 app.config.from_object(Config)
 
-# Menginisialisasi aplikasi dengan ekstensi SQLAlchemy
+"""INISIALISASI DATABASE DENGAN APLIKASI FLASK"""
 init_db(app)
 
-# Integrasi Flask-Migrate di sini
+
 #migrate = Migrate(app, db)
 
-# Membuat tabel-tabel di database jika belum ada
+"""BUAT TABEL-TABEL DATABASE JIKA BELUM ADA"""
 with app.app_context():
     db.create_all()
 
-# Menetapkan kunci rahasia
+"""SET KUNCI RAHASIA APLIKASI"""
 app.secret_key = Config.SECRET_KEY
 
-# Konfigurasi OAuth
+"""KONFIGURASI OAUTH UNTUK PENYEDIA GOOGLE"""
 google_client_id = '1059324365498-4n4tkg58mi9ufl4gk1jfs0p71dfc6vqf.apps.googleusercontent.com'
 google_client_secret = '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'
 google_redirect_uri = 'https://127.0.0.1:5000/auth/callback'
@@ -47,9 +50,10 @@ google = oauth.remote_app(
 )
 
 
-# Mengimpor model dan routes setelah inisialisasi database
+"""IMPORT ROUTES DARI FILE ROUTES"""
 from routes import *
 
-# Menjalankan aplikasi Flask dalam mode debug
+"""MENJALAKAN APLIKASI JIKA FILE INI DIJALANKAN SEBAGAI SCRIPT UTAMA"""
 if __name__ == '__main__':
+    """MENJALANKAN APLIKASI FLASK DENGAN MENGGUNAKAN SSL CONTEXT UNTUK HTTPS"""
     app.run(ssl_context=('cert.pem', 'key.pem'))

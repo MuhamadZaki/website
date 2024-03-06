@@ -1,10 +1,10 @@
 class Config:
-    # Kunci rahasia untuk sesi
+    """KUNCI RAHASIA APLIKASI"""
     SECRET_KEY = 'kumispenggoda'
 
-    # Konfigurasi database
+    """KONFIGURASI DATABASE"""
     SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root@localhost/webapp'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    # Mode debug aktif
+    """MODE DEBUG AKTIF"""
     DEBUG = True

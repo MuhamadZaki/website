@@ -63,17 +63,17 @@ nav a {
 
 .aktivasi_akun-form label {
     display: block;
-    margin-bottom: 25px; 
+    margin-bottom: 5px; 
 }
 
+.aktivasi_akun-form input[type="email"],
 .aktivasi_akun-form input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s; 
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .aktivasi_akun-form input[type="text"]:focus {
