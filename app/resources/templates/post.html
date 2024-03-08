@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/post.css')}}">
+
+    <title>Admin Dashboard Panel</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="{{url_for('static', filename='img/random.png')}}" alt="logo">
+            </div>
+
+            <span class="logo_name">Test</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/admin_panel">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="/post">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Content Builder</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Media Library</span>
+                </a></li>
+                
+                <li><a href="#">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Settings</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="{{url_for('static', filename='img/zaki.jpg')}}" alt="profil">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Post</span>
+                </div>
+
+
+                <form action="/publish" method="POST">
+                    <div class="form-row">
+                        <div class="left-column">
+                            <label for="title">Title*</label><br>
+                            <input type="text" id="title" name="title"><br>
+                        </div>
+                        <div class="right-column">
+                            <label for="image">Image*</label><br>
+                            <input type="file" id="image" name="image"><br>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="left-column">
+                            <label for="published_on">Published On*</label><br>
+                            <input type="date" id="published_on" name="published_on"><br>
+                        </div>
+                        <div class="right-column">
+                            <label for="is_featured">Featured*</label><br>
+                            <input type="checkbox" id="is_featured" name="is_featured"><br>
+                        </div>
+                    </div>
+                    <!-- Ulangi untuk setiap pasangan input sesuai kebutuhan -->
+                    <div class="form-row">
+                        <div class="left-column">
+                            <label for="cta">Cta*</label><br>
+                            <select id="cta" nama="cta">
+                                <option value="contoh">Contoh</option>
+                                <option value="saya">Saya</option>
+                            </select>
+                        </div>
+                        <div class="right-column">
+                            <label for="category">Category*</label><br>
+                            <select id="category" name="category">
+                                <option value="news">News</option>
+                                <option value="tutorial">Tutorial</option>
+                                <option value="review">Review</option>
+                            </select><br>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="left-column">
+                            <label for="author">Author*</label><br>
+                            <select id="author" name="author">
+                                <option value="john_doe">test</option>
+                                <option value="jane_doe">Jane Doe</option>
+                            </select><br>
+                        </div>
+                        <div class="right-column">
+                            <label for="keywords">Keywords*</label><br>
+                            <input type="text" id="keywords" name="keywords"><br>
+                        </div>
+                    </div>
+
+                    <label for="summary">Summary*</label><br>
+                    <textarea id="summary" name="summary"></textarea><br>
+                    
+                    <label for="meta_description">Meta Description*</label><br>
+                    <textarea id="meta_description" name="meta_description"></textarea><br>
+                    
+                    <label for="blok_content">Blog Content*</label><br>
+                    <textarea id="blok_content" name="blok_content"></textarea><br>
+                    
+                    <input type="submit" value="Publish">
+                    <input type="submit" value="Save">
+                </form>
+                
+
+            </div>
+
+            
+        </div>
+    </section>
+    <script src="https://cdn.tiny.cloud/1/5xacvakpmmwhijq6sd8bj42yfdznovh1atu0vwtv5lo8v71r/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="{{url_for('static', filename='js/post.js')}}"></script>
+</body>
+</html>

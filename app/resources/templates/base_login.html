@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base_login.css') }}">  
+    <title>login</title>
+</head>
+<body>
+    <!-- Login form -->
+<div class="login-form">
+    <h2>Login!</h2>
+    <form action="/login" method="POST">
+
+        <label for="login-email">Email:</label><br>
+        <input type="email" id="login-email" name="email" required><br>
+        <label for="login-password">Password:</label><br>
+        <input type="password" id="login-password" name="password" required><br>
+        <input type="checkbox" id="show-password">
+        <label for="show-password">Show</label><br>
+        <a href="/reset_password">Forgot Password</a>
+        <button type="submit">Login</button>
+    </form>
+     <!-- Social Media Login Options -->
+ <div class="social-login">
+    <p>Or log in with:</p>
+    <a href="/auth/google" class="social-button google">Google</a>
+</div>
+<div class="centered-text">
+    <p>Need an account?<a href="/register"> Sigin Up</a></p>
+</div>
+
+</div>
+<!-- Panggil file JavaScript dari folder static -->
+<script src="{{ url_for('static', filename='js/base_login.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!--doctype html-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Blog Website HTML</title>
+<!--Stylesheet----------------------------------->
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/home_page.css')}}"/>
+<!--fav-icon------------------------------------->
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+<!--using-font-awesome--------------------------->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<!--poppins-font-family-------------------------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="blog">
+        <!--navigation----------------------------->
+        <div class="navigation">
+            <!--logo---------->
+            <a href="home_page.html" class="logo">
+                <i class="fas fa-blog"></i> Test
+            </a>
+            <!--post-filter---------->
+            <nav>
+                <!--menu-icon------------->
+                <input type="checkbox" class="menu-btn" id="menu-btn">
+                <label for="menu-btn" class="menu-icon">
+                    <span class="nav-icon"></span>
+                </label>
+                <!--filter--------->
+                <ul class="blog-filter">
+                    <li class="list blog-filter-active" data-filter="all">All</li>
+                    <li class="list" data-filter="web">Home</li>
+                    <li class="list" data-filter="app">About Us</li>
+                    <li class="list" data-filter="new">Contact</li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!--ad--------------------------->
+        <div class="ad">
+            <a href="#">
+              <img src="{{ url_for('static', filename='img/ad-home.png') }}" alt="ads">
+            </a>
+        </div>
+        <!--container------------------------------->
+        <div class="blog-container">
+            <!--box-1----------------------------------------------->
+            <div class="blog-box app">
+                <!--img----->
+                <div class="blog-img">
+                  <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">App</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="/artikel">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                      <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box-2---------------------------------------->
+            <div class="blog-box web">
+                <!--img----->
+                <div class="blog-img">
+                  <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">Web</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">Web Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                      <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box-3-------------------------------------------------->
+            <div class="blog-box new">
+                <!--img----->
+                <div class="blog-img">
+                  <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">New</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2021</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                      <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box--4---------------------------------------------------------->
+            <div class="blog-box app">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">App</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box--5----------------------------------------->
+            <div class="blog-box web">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">Web</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">Web Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box--6--------------------------------->
+            <div class="blog-box app">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">App</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad ZAki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box--7---------------------------------------->
+            <div class="blog-box new">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">New</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2021</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box-8------------------------------------------>
+            <div class="blog-box app">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">App</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box---9------------------------------->
+            <div class="blog-box app">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">App</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2022</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box-10--------------------------------------->
+            <div class="blog-box web">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">Web</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box--11---------------------------------->
+            <div class="blog-box app">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">App</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">App Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+            <!--box-12---------------------------------->
+            <div class="blog-box web">
+                <!--img----->
+                <div class="blog-img">
+                    <img src="{{ url_for('static', filename='img/b-4.jpg') }}" alt="img">
+                    <span class="category">Web</span>
+                </div>
+                <!--text---->
+                <div class="blog-text">
+                    <!--title------------------------>
+                    <a href="#">
+                        <strong>How To Create Ramdan Time App Design</strong>
+                    </a>
+                    <!--time-and-category------------->
+                    <div class="category-time">
+                        <span class="blog-category">Web Design</span>
+                        <span class="published-time">11-03-2024</span>
+                    </div>
+                    <!--publisher-profile------------->
+                    <div class="publisher-profile">
+                        <img src="{{ url_for('static', filename='img/zaki.jpg') }}" alt="publisher">
+                        <span>Muhamad Zaki</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ad----------------------->
+        <div class="ad">
+            <a href="#">
+                <img src="{{ url_for('static', filename='img/ad-home.png') }}" alt="ads">
+            </a>
+        </div>
+    </section>
+    <!--footer------------------------------------->
+    <footer>
+        <span class="copyright">Copyright 2024 - Team kiw-kiw</span>
+        <!--social-links------->
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <!--JQuery----------------------->
+    <scrip type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></scrip>
+    
+    <!--script----------------------->
+    <script type="text/javascript">
+    
+        /*blog-filter-menu----------------------------*/
+        $(document).on('click','.blog-filter li',function(){
+            $(this).addClass('blog-filter-active').siblings().removeClass('blog-filter-active')
+        });
+        /*post-filter---------------------------------*/
+        $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if(value == 'all'){
+                    $('.blog-box').show('1000');
+                }
+                else{
+                    $('.blog-box').not('.'+value).hide('1000');
+                    $('.blog-box').filter('.'+value).show('1000');
+                }
+            });
+        });
+    
+        /*for-fix-filter-menu-----------------------------*/
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 80){
+                $('nav').addClass('fix-nav');
+            }
+            else{
+                $('nav').removeClass('fix-nav');
+            }
+        });
+    </script>
+    
+</body>
+</html>

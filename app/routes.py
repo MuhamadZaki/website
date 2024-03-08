@@ -9,20 +9,25 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 """IMPORT MODUL UNTUK STRING ACAK"""
-import random, string, os
+import random, string
 
 """ROUTE UNTUK HALAMAN UTAMA"""
+
 @app.route('/home')  
 def home():
-    return render_template('home.html')
+    return render_template('/home_page.html')
+
+@app.route('/artikel')
+def artikel():
+    return render_template('artikel_page.html')
 
 @app.route('/post')
 def post():
     return render_template('post.html')
 
-@app.route('/dashboard')
-def dashboard():
-    return render_template('dashboard.html')
+@app.route('/admin_panel')
+def admin_panel():
+    return render_template('admin_panel.html')
 
 
  
@@ -65,7 +70,7 @@ def register():
         else:
             flash("Kata Sandi dan konfirmasi Kata sandi tidak cocok!")
             return redirect(url_for('register'))
-    return render_template('register.html')
+    return render_template('base_register.html')
 
 """ROUTE UNTUK LOGIN PENGGUNA, MENDUKUNG METODE GET DAN POST"""    
 @app.route('/login', methods=['GET', 'POST'])  
@@ -92,11 +97,11 @@ def login():
             """SET SESI USER DAN TAMPILAN PESAN SUKSES"""
             session['user_id'] = user.id
             flash('Login berhasil!')
-            return redirect(url_for('home'))
+            return redirect(url_for('admin_panel'))
         else:
             flash('Email atau kata sandi tidak valid! Silakan coba lagi!')
             return redirect(url_for('login'))
-    return render_template('login.html')
+    return render_template('base_login.html')
 
 """ROUTE UNTUK RESET PASSWORD"""
 @app.route('/reset_password')
@@ -146,7 +151,7 @@ def authorized():
         return render_template('aktivasi_akun.html', email=email)
 
     session['user_id'] = user.id
-    return redirect(url_for('home'))
+    return redirect(url_for('admin_panel'))
 
 """ROUTE UNTUK LOGOUT PENGGUNA, MENGHAPUS SESI"""
 @app.route('/logout')
@@ -174,7 +179,6 @@ def aktivasi_akun():
         """PERIKSA APAKAH USER ADA DAN KODE AKTIVASI COCOK"""
         if user and user.activation_code == activation_code:
 
-            """JIKA COCOK, HAPUS KODE AKTIVASI DAN COMMIT PERUBAHAN"""
             user.activation_code = None
             db.session.commit()
             flash('Akun Anda telah berhasil diaktivasi, silahkan login!')
