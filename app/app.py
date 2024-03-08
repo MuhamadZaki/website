@@ -29,9 +29,9 @@ with app.app_context():
 app.secret_key = Config.SECRET_KEY
 
 """KONFIGURASI OAUTH UNTUK PENYEDIA GOOGLE"""
-google_client_id = '1059324365498-4n4tkg58mi9ufl4gk1jfs0p71dfc6vqf.apps.googleusercontent.com'
-google_client_secret = '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'
-google_redirect_uri = 'https://127.0.0.1:5000/auth/callback'
+google_client_id = ''
+google_client_secret = ''
+google_redirect_uri = ''
 
 oauth = OAuth(app)
 google = oauth.remote_app(

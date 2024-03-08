@@ -1,6 +1,6 @@
 class Config:
     """KUNCI RAHASIA APLIKASI"""
-    SECRET_KEY = 'kumispenggoda'
+    SECRET_KEY = ''
 
     """KONFIGURASI DATABASE"""
     SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root@localhost/webapp'

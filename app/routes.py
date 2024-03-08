@@ -194,7 +194,7 @@ def send_activation_email(email, activation_code):
     smtp_host ='smtp.gmail.com'
     smtp_port =587
     smtp_username ='hellorandompedia@gmail.com'
-    smtp_password ='ukkyxxgehonfsriy'
+    smtp_password =''
     
     """MEMBUAT OBJEK PESAN EMAIL"""
     msg = MIMEMultipart()
