@@ -299,6 +299,8 @@ nav.close ~ .dashboard .top{
 }
 
 
+
+
 /* form Post*/
 
 form {
@@ -364,3 +366,15 @@ input[type="submit"]:hover {
     }
 
 }
+
+
+.email li {
+    margin-bottom: 10px;
+}
+
+.email li span {
+    display: inline-block;
+    padding: 5px 10px;
+    
+}
+

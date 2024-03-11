@@ -21,7 +21,7 @@ class User(db.Model):
     password_hash = db.Column(db.String(128)) 
     oauth_provider = db.Column(db.String(50))
     oauth_token = db.Column(db.String(200))
-    activation_code = db.Column(db.String(10))
+    activation_code = db.Column(db.String(10)) # Hapus aja
 
     """METODE UNTUK MENGATUR PASSWORD PENGGUNA DENGAN OPSI KONFIGURASI SCRYPT"""
     def set_password(self, password, scrypt_config=None):

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--=== Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/post.css')}}">
      
     <!----===== Iconscout CSS ===== -->
+    
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/post.css')}}">
+    
 
-    <title>Admin Dashboard Panel</title> 
+    <title>post</title> 
 </head>
 <body>
     <nav>
@@ -35,9 +35,14 @@
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Content Builder</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="/media_library">
                     <i class="uil uil-chart"></i>
                     <span class="link-name">Media Library</span>
+                </a></li>
+
+                <li><a href="/save_post">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Save Post</span>
                 </a></li>
                 
                 <li><a href="#">
@@ -47,10 +52,15 @@
             </ul>
             
             <ul class="logout-mode">
-                <li><a href="#">
+                <li><a href="/login">
                     <i class="uil uil-signout"></i>
                     <span class="link-name">Logout</span>
                 </a></li>
+
+                <ul class="email">
+                    <li>
+                        <span><i class="fas fa-user"></i> {{ user.email }}</span>
+                    </li>
 
                 <li class="mode">
                     <a href="#">
@@ -75,7 +85,9 @@
                 <input type="text" placeholder="Search here...">
             </div>
             
-            <img src="{{url_for('static', filename='img/zaki.jpg')}}" alt="profil">
+            <img src="{{ profile_image_url }}" alt="Gambar Profil">
+
+
         </div>
 
         <div class="dash-content">
@@ -107,7 +119,7 @@
                             <input type="checkbox" id="is_featured" name="is_featured"><br>
                         </div>
                     </div>
-                    <!-- Ulangi untuk setiap pasangan input sesuai kebutuhan -->
+                     <!----======== Ulangi sesuai kebutuhan ======== -->
                     <div class="form-row">
                         <div class="left-column">
                             <label for="cta">Cta*</label><br>
@@ -158,6 +170,7 @@
             
         </div>
     </section>
+     <!----======== Javascripts ======== -->
     <script src="https://cdn.tiny.cloud/1/5xacvakpmmwhijq6sd8bj42yfdznovh1atu0vwtv5lo8v71r/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="{{url_for('static', filename='js/post.js')}}"></script>
 </body>

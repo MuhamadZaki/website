@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!----======== CSS ======== -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base_login.css') }}">  
     <title>login</title>
 </head>
 <body>
-    <!-- Login form -->
+     <!----======== Login form ======== -->
 <div class="login-form">
     <h2>Login!</h2>
     <form action="/login" method="POST">
@@ -21,7 +22,7 @@
         <a href="/reset_password">Forgot Password</a>
         <button type="submit">Login</button>
     </form>
-     <!-- Social Media Login Options -->
+      <!----======== Sosial media login options ======== -->
  <div class="social-login">
     <p>Or log in with:</p>
     <a href="/auth/google" class="social-button google">Google</a>
@@ -31,7 +32,7 @@
 </div>
 
 </div>
-<!-- Panggil file JavaScript dari folder static -->
+ <!----======== Javascripts ======== -->
 <script src="{{ url_for('static', filename='js/base_login.js') }}"></script>
 </body>
 </html>

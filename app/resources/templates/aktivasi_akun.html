@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!----======== CSS ======== -->
     <link rel="stylesheet" href="{{url_for('static', filename=('css/aktivasi_akun.css'))}}">
     <title>aktivasiakun</title>
 </head>
 <body>
-     <!-- Form aktivasi akun -->
+     <!----======== Form aktivasi akun ======== -->
      <div class="aktivasi_akun-form">
         <h1>Aktivasi Akun!</h1>
         <form action="/aktivasi_akun" method="POST">
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br>
-            <!-- Input untuk kode OTP -->
+            <!----======== Input untuk kode otp  ======== -->
             <label for="otp">Kode otp:</label><br>
             <input type="text" id="otp" name="otp" required><br>
             <button type="submit">NEXT</button>

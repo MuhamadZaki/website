@@ -11,11 +11,12 @@ from email.mime.text import MIMEText
 """IMPORT MODUL UNTUK STRING ACAK"""
 import random, string
 
+
 """ROUTE UNTUK HALAMAN UTAMA"""
 
 @app.route('/home')  
 def home():
-    return render_template('/home_page.html')
+    return render_template('home_page.html')
 
 @app.route('/artikel')
 def artikel():
@@ -23,11 +24,36 @@ def artikel():
 
 @app.route('/post')
 def post():
-    return render_template('post.html')
+    user_id = session.get('user_id')
+    if user_id is None:
+        return 401
+    user = User.query.get_or_404(user_id)
+    return render_template('post.html', user=user)
+
+@app.route('/save_post')  
+def save_post():
+    user_id = session.get('user_id')
+    if user_id is None:
+        return 404
+    user = User.query.get_or_404(user_id)
+    return render_template('save_post.html', user=user)
+
+@app.route('/media_library')  
+def media_library():
+    user_id = session.get('user_id')
+    if user_id is None:
+        return 404
+    user = User.query.get_or_404(user_id)
+    return render_template('media_library.html', user=user)
+
 
 @app.route('/admin_panel')
 def admin_panel():
-    return render_template('admin_panel.html')
+    user_id = session.get('user_id')
+    if user_id is None:
+        return 401
+    user = User.query.get_or_404(user_id)
+    return render_template('admin_panel.html', user=user)
 
 
  
@@ -151,7 +177,12 @@ def authorized():
         return render_template('aktivasi_akun.html', email=email)
 
     session['user_id'] = user.id
-    return redirect(url_for('admin_panel'))
+
+    # Ambil URL gambar profil pengguna
+    profile_image_url = user_info.data.get('picture')
+    return redirect(url_for('admin_panel', profile_image_url=profile_image_url))
+
+
 
 """ROUTE UNTUK LOGOUT PENGGUNA, MENGHAPUS SESI"""
 @app.route('/logout')

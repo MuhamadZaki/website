@@ -466,3 +466,84 @@ nav.close ~ .dashboard .top{
     padding: 5px 10px;
     
 }
+
+
+/* Styling untuk All Post*/
+.overview .title {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.overview .title i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.overview .title .text {
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Styling untuk tabel postingan */
+.posts-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.posts-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.posts-table table th,
+.posts-table table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.posts-table table th {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Menambahkan hover effect pada baris tabel */
+.posts-table table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tombol Edit dan Hapus */
+.posts-table table td button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+}
+
+.posts-table table td button:hover {
+    background-color: #0056b3;
+}
+
+.posts-table table td button.delete {
+    background-color: #dc3545;
+}
+
+.posts-table table td button.delete:hover {
+    background-color: #c82333;
+}
+
+

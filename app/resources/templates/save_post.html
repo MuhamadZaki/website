@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/admin_panel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/save_post.css')}}">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
-    <title>adminpanel</title> 
+    <title>savepost</title> 
 </head>
 <body>
     <nav>
@@ -91,12 +91,45 @@
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
+                    <span class="text">All Post</span>
                 </div>
+
+                 <!----======== Tombol postingan ======== -->
+        <div class="posts-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Judul</th>
+                        <th>Penulis</th>
+                        <th>Kategori</th>
+                        <th>Tag</th>
+                        <th>Tanggal</th>
+                        <th>Action</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                     <!----======== Baris dinamis dimasukan menggunakan logisa sisi server======== -->
+                    <tr>
+                        <td>Logika Pemrograman dalam Praktik: Langkah-langkah untuk Menyelesaikan Tantangan Koding</td>
+                        <td>Muhamad Zaki</td>
+                        <td>Teknologi</td>
+                        <td>Bayar steam wallet code menggunakan qris, Cara bayar steam wallet code menggunakan qris di codashop, Cara beli steam wallet code menggunakan qris di codashop, Cara top up steam, Cara top up steam wallet, Cara top up steam wallet di codashop, Cara top up steam wallet menggunakan qris di codashop, Cara topup steam di codashop, Cara topup steam wallet code di codashop, Cara topup steam wallet code menggunakan qris di codashop, Top up steam di codashop, Top up steam wallet codashop, Top up steam wallet di codashop, Topup steam di codashop Topup steam wallet code di codasop</td>
+                        <td>2024-03-09</td>
+                        <td>
+                            <!-- Tombol Edit -->
+                            <button onclick="editPost(this)">Edit</button>
+                            <!-- Tombol Hapus -->
+                            <button onclick="deletePost(this)">Hapus</button>
+                        </td>
+                    </tr>
+                     <!----======== Ulangi tr setiap postingan ======== -->
+                </tbody>
+            </table>
+        </div>
+
             </div>
         </div>
     </section>
-    <!----======== Javascripts ======== -->
-    <script src="{{url_for('static', filename='js/admin_panel.js')}}"></script>
+    <script src="{{url_for('static', filename='js/save_post.js')}}"></script>
 </body>
 </html>

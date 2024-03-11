@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/admin_panel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/media_library.css')}}">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -91,12 +91,33 @@
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
+                    <span class="text">Media Library</span>
                 </div>
+ <!----======== Form unggah gambar ======== -->
+        <div class="upload-form">
+            <form action="/upload_image" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" id="image">
+                <button type="submit">Upload Image</button>
+            </form>
+        </div>
+
+ <!----======== Daftar gambar ======== -->
+<div class="image-list">
+    <ul>
+        <li>
+            <img src="path_to_image" >
+            <form action="/delete_image" method="post">
+                <input type="hidden" name="image_id" value="image_id">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+         <!----======== Ulangi ini untuk setiap gambar ======== -->
+    </ul>
+</div>
             </div>
         </div>
     </section>
-    <!----======== Javascripts ======== -->
-    <script src="{{url_for('static', filename='js/admin_panel.js')}}"></script>
+     <!----======== Javascripts ======== -->
+    <script src="{{url_for('static', filename='js/media_library.js')}}"></script>
 </body>
 </html>

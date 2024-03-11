@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Form pendaftaran -->
+     <!----======== From pendaftaran ======== -->
 <div class="register-form">
     <h1>Sigin!</h1>
     <form action="/register" method="POST">
@@ -23,14 +23,14 @@
 
         <button type="submit">Register</button>
     </form>
-    <!-- Opsi Masuk Media Sosial -->
+     <!----======== Opsi masuk media sosial ======== -->
 <div class="social-login">
     <p>Or sign in with:</p>
     <a href="/auth/google" class="social-button google">Google</a>
 </div>
 <!--<p>By signing up, I agree to Zaki Terms of Use & Privacy Policy, and the Terms of Use & Privacy Policy of the learning platform.</p>-->
 </div>
-<!-- Panggil file JavaScript dari folder static -->
+ <!----======== Javascripts ======== -->
 <script src="{{ url_for('static', filename='js/base_register.js') }}"></script>
 </body>
 </html>
